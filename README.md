@@ -28,3 +28,7 @@ Testing the APIs
 
 <img src="/screenshots/delete.jpg">
 
+# Upload / Download Rest API Example
+
+<img src="/screenshots/upload.png">
+
