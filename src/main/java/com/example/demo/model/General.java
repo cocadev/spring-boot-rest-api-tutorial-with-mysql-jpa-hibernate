@@ -15,13 +15,7 @@ public class General {
 
     @NotNull
     @Size(max = 100)
-    @Column(name = "first_name")
-    private String firstName;
-
-    @NotNull
-    @Size(max = 250)
-    @Column(name = "last_name")
-    private String lastName;
+    private String hero;
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
@@ -38,8 +32,31 @@ public class General {
 
     }
 
-    public General(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public General(String hero) {
+        this.hero = hero;
+    }
+    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getHero() {
+        return hero;
+    }
+
+    public void setHero(String hero) {
+        this.hero = hero;
+    }
+    
+    public Set<Weapon> getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(Set<Weapon> weapons) {
+        this.weapons = weapons;
     }
 }

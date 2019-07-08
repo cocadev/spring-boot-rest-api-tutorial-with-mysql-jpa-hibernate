@@ -27,6 +27,7 @@ public class Weapon {
             mappedBy = "weapons")
     private Set<General> generals = new HashSet<>();
 
+    
     public Weapon() {
 
     }
@@ -34,4 +35,29 @@ public class Weapon {
     public Weapon(String name) {
         this.name = name;
     }
+    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public Set<General> getGenerals() {
+        return generals;
+    }
+
+    public void setPosts(Set<General> generals) {
+        this.generals = generals;
+    }
+   
 }
