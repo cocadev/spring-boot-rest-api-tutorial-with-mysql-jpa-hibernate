@@ -7,6 +7,8 @@ import javax.validation.constraints.*;
 
 import org.hibernate.annotations.NaturalId;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "weapons")
 public class Weapon {
@@ -19,6 +21,7 @@ public class Weapon {
     @NaturalId
     private String name;
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                 CascadeType.PERSIST,
@@ -56,7 +59,7 @@ public class Weapon {
         return generals;
     }
 
-    public void setPosts(Set<General> generals) {
+    public void setGenerals(Set<General> generals) {
         this.generals = generals;
     }
    

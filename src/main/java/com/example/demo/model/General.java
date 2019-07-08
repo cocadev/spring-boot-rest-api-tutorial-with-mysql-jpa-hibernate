@@ -5,6 +5,8 @@ import java.util.*;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "generals")
 public class General {
@@ -17,6 +19,7 @@ public class General {
     @Size(max = 100)
     private String hero;
 
+    @JsonIgnore 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                 CascadeType.PERSIST,
