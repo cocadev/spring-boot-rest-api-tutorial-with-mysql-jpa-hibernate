@@ -1,4 +1,4 @@
-# JAVA SPRING Boot Rest Api With Mysql Jpa Hibernate 
+# JAVA SPRING Boot Rest Api With Mysql & Jpa Hibernate 
 
 Testing the APIs
 
